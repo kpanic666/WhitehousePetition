@@ -13,6 +13,9 @@
 		E9830DBD2721552300C0110B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9830DBB2721552300C0110B /* Main.storyboard */; };
 		E9830DBF2721552500C0110B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9830DBE2721552500C0110B /* Assets.xcassets */; };
 		E9830DC22721552500C0110B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9830DC02721552500C0110B /* LaunchScreen.storyboard */; };
+		E9830DCA2721622D00C0110B /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9830DC92721622D00C0110B /* Petition.swift */; };
+		E9830DCC2721638100C0110B /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9830DCB2721638100C0110B /* Petitions.swift */; };
+		E9830DCE272182ED00C0110B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9830DCD272182ED00C0110B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E9830DBE2721552500C0110B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9830DC12721552500C0110B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9830DC32721552500C0110B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9830DC92721622D00C0110B /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		E9830DCB2721638100C0110B /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		E9830DCD272182ED00C0110B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				E9830DB52721552300C0110B /* AppDelegate.swift */,
 				E9830DB72721552300C0110B /* SceneDelegate.swift */,
 				E9830DB92721552300C0110B /* ViewController.swift */,
+				E9830DC92721622D00C0110B /* Petition.swift */,
+				E9830DCB2721638100C0110B /* Petitions.swift */,
+				E9830DCD272182ED00C0110B /* DetailViewController.swift */,
 				E9830DBB2721552300C0110B /* Main.storyboard */,
 				E9830DBE2721552500C0110B /* Assets.xcassets */,
 				E9830DC02721552500C0110B /* LaunchScreen.storyboard */,
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9830DBA2721552300C0110B /* ViewController.swift in Sources */,
+				E9830DCA2721622D00C0110B /* Petition.swift in Sources */,
 				E9830DB62721552300C0110B /* AppDelegate.swift in Sources */,
+				E9830DCE272182ED00C0110B /* DetailViewController.swift in Sources */,
 				E9830DB82721552300C0110B /* SceneDelegate.swift in Sources */,
+				E9830DCC2721638100C0110B /* Petitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
