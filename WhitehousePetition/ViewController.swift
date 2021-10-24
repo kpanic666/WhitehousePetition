@@ -19,7 +19,7 @@ class ViewController: UITableViewController {
         
         return petitions
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,21 +32,28 @@ class ViewController: UITableViewController {
         } else {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
-
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                parse(json: data)
-                return
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    self.parse(json: data)
+                    return
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.showMessage(title: "Loading Error", message: "There was a problem loading the feed; please check your connection and try again.")
             }
         }
-        
-        showMessage(title: "Loading Error", message: "There was a problem loading the feed; please check your connection and try again.")
     }
     
     func parse(json: Data) {
         if let jsonPetitions = try? JSONDecoder().decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
-            tableView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -72,7 +79,7 @@ class ViewController: UITableViewController {
         
         present(ac, animated: true)
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         filteredPetitions.count
     }
@@ -92,4 +99,3 @@ class ViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-
